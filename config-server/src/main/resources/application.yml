@@ -1,0 +1,23 @@
+server:
+  port: 8071
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active:
+      - git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/JukeSpider/config-server.git
+
+encrypt:
+  key: f@92&fk$278#
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
